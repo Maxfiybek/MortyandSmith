@@ -15,7 +15,7 @@ import androidx.compose.ui.graphics.Color
 fun MortyAndSmithAppBar(
     title: String = "",
     hasNavigationIcon: Boolean = true,
-    onNavigationIconClick: () -> Unit
+    onNavigationIconClick: () -> Unit = {}
 ) {
     TopAppBar(
         title = {
@@ -29,7 +29,11 @@ fun MortyAndSmithAppBar(
                 IconButton(
                     onClick = onNavigationIconClick
                 ) {
-                    Icon(imageVector = Icons.Default.ArrowBack, contentDescription = null)
+                    Icon(
+                        imageVector = Icons.Default.ArrowBack,
+                        contentDescription = null,
+                        tint = Color.White
+                    )
                 }
             }
         }
